@@ -20,7 +20,7 @@ public class CheckingStepManager {
         StepstoCheck = new ArrayList<StepsToCheck>();
 
         // Generate random tasks
-
+// need to finish this by today
         StepsToCheck Step_1 = new StepsToCheck("1. LH FWD FUSELAGE\n" +
                 "\n- Passenger/crew Door check" +
                 "\n- F/O / CAPT / STBY static ports" +
