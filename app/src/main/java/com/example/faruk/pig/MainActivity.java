@@ -5,13 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,8 +15,6 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.google.android.glass.app.Card;
 // Specific Glass libraries for gesture detection
-import com.google.android.glass.touchpad.Gesture;
-import com.google.android.glass.touchpad.GestureDetector;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
 
@@ -39,7 +33,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
     // Current card selected
     private int currentCard = -1;
 
-    private List<ToDoTask> mTaskList;
+    private List<StepsToCheck> mTaskList;
 
 
     private ExampleCardScrollAdapter adapter;
@@ -70,7 +64,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
 
         mCards = new ArrayList<Card>();
-        ToDoListManager listManager = new ToDoListManager();
+        CheckingStepManager listManager = new CheckingStepManager();
 
         mTaskList = listManager.getToDoList();
 

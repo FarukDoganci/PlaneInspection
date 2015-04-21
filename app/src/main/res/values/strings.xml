@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">To Do List App</string>
+    <string name="app_name">Inspection App</string>
     
     <!--  Initial text -->
-    <string name="hello_world">To do list!</string>
+    <string name="hello_world">Inspection App</string>
     
     <!--  Text for optins in menu -->
     <string name="settings_1">Check</string>

@@ -1,53 +1,54 @@
 package com.example.faruk.pig;
 
+import com.google.android.glass.widget.CardBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.android.glass.app.Card;
 
 /* Manager of tasks. Basically it's a list with all the tasks. At this moment only 4.
    All tasks are hard-written but in the next version they'll be originated by voice
 */
-public class ToDoListManager {
+public class CheckingStepManager {
 
     // List to store all the tasks
-    private List<ToDoTask> mToDoList;
+    private List<StepsToCheck> StepstoCheck;
+    private CardBuilder mCards;
 
-    public ToDoListManager (){
+    public CheckingStepManager(){
 
 
-        mToDoList = new ArrayList<ToDoTask>();
+        StepstoCheck = new ArrayList<StepsToCheck>();
 
         // Generate random tasks
 
-        ToDoTask task_1 = new ToDoTask("1. LH FWD FUSELAGE\n" +
+        StepsToCheck Step_1 = new StepsToCheck("1. LH FWD FUSELAGE\n" +
                 "\n- Passenger/crew Door check" +
                 "\n- F/O / CAPT / STBY static ports" +
                 "\n- AOA 1 probe" +
                 "\n- Avionics equipment" +
                 "\n- Oxygen overboard discharge indicator");
-        mToDoList.add(task_1);
+        StepstoCheck.add(Step_1);
 
-        ToDoTask task_2 = new ToDoTask("2. NOSE SECTION" +
+        StepsToCheck task_2 = new StepsToCheck("2. NOSE SECTION" +
                 "\n- Cockpit Windshield" +
                 "\n- Radome and latches" +
                 "\n- Pilot probes" +
                 "\n- Antennas" +
                 "\n- TAT probes");
-        mToDoList.add(task_2);
+        StepstoCheck.add(task_2);
 
-        ToDoTask task_3 = new ToDoTask("3. NOSE L/G AND DOOR" +
+        StepsToCheck task_3 = new StepsToCheck("3. NOSE L/G AND DOOR" +
                 "- Door's Attachment" +
                 "\n- Gear Assy Structure" +
                 "\n- Shock Absorber Sliding Tube");
-        mToDoList.add(task_3);
+        StepstoCheck.add(task_3);
 
     }
 
     // Return all tasks
-    public List<ToDoTask> getToDoList() {
+    public List<StepsToCheck> getToDoList() {
 
-        return mToDoList;
+        return StepstoCheck;
     }
 
 }

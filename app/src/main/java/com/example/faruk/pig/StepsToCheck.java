@@ -1,12 +1,13 @@
 package com.example.faruk.pig;
 
-public class ToDoTask {
+public class StepsToCheck {
 
     // At this moment our task will only have one string
     private String mTask = "";
 
+
     // Constructor with initial String
-    public ToDoTask (String stringTask) {
+    public StepsToCheck(String stringTask) {
 
         mTask = stringTask;
 
