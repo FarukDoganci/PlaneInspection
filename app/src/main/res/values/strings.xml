@@ -5,6 +5,16 @@
     
     <!--  Initial text -->
     <string name="hello_world">Inspection App</string>
+
+    <!--  Text for Strings/tasks in Steps -->
+    <string name="task_1">
+        1. LH FWD FUSELAGE\n
+        - Passenger/crew Door\n
+        - F/O / CAPT / STBY static ports\n
+        - AOA 1 probe\n
+        - Avionics equip.vent air inlet valve\n
+        - Oxygen discharge indicator
+    </string>
     
     <!--  Text for optins in menu -->
     <string name="settings_1">Check</string>
