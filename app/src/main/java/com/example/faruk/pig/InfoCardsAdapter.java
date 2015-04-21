@@ -10,10 +10,10 @@ import com.google.android.glass.app.Card;
 import com.google.android.glass.widget.CardScrollAdapter;
 
 public class InfoCardsAdapter extends CardScrollAdapter {
-    private List<infocard> mCards;
+    private List<InfoCard> mCards;
     private Context context;
 
-    public InfoCardsAdapter(Context context, List<infocard> mCards) {
+    public InfoCardsAdapter(Context context, List<InfoCard> mCards) {
         this.context = context;
         this.mCards = mCards;
     }
@@ -37,7 +37,7 @@ public class InfoCardsAdapter extends CardScrollAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Card card = new Card(context);
 
-        infocard mc = mCards.get(position);
+        InfoCard mc = mCards.get(position);
 
         // Card text
         if (mc.getText() != null)
