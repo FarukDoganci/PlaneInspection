@@ -12,6 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+
+import com.google.android.glass.app.Card.ImageLayout;
+import com.google.android.glass.widget.CardBuilder;
+import com.google.android.glass.widget.CardScrollView;
+import com.example.faruk.pig.*;
+
 
 import com.google.android.glass.app.Card;
 // Specific Glass libraries for gesture detection
@@ -24,6 +36,9 @@ public class MainActivity extends Activity implements OnItemClickListener{
     // Define tag for debugging
     private static final String TAG = "MyActivity";
 
+    //infocards
+    private List<CardBuilder> iCards;
+
     // List of cards
     private List<Card> mCards;
 
@@ -34,9 +49,12 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private int currentCard = -1;
 
     private List<StepsToCheck> mTaskList;
+    private ExampleCardScrollAdapter mAdapter;
 
 
     private ExampleCardScrollAdapter adapter;
+    private CardScrollView iCardScrollView;
+    private ExampleCardScrollAdapter iAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,42 +105,36 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
     // Class to manage CardScrollView
     private class ExampleCardScrollAdapter extends CardScrollAdapter {
-
         @Override
         public int getPosition(Object item) {
-
             return mCards.indexOf(item);
         }
 
         @Override
         public int getCount() {
-
             return mCards.size();
         }
 
         @Override
         public Object getItem(int position) {
-
             return mCards.get(position);
         }
 
         @Override
         public int getViewTypeCount() {
-
-            return Card.getViewTypeCount();
+            return CardBuilder.getViewTypeCount();
         }
 
         @Override
         public int getItemViewType(int position){
-
             return mCards.get(position).getItemViewType();
         }
 
-        public View getView(int position, View convertView,
-                            ViewGroup parent) {
-
-            return  mCards.get(position).getView(convertView, parent);
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return mCards.get(position).getView(convertView, parent);
         }
+
     }
 
 
@@ -155,15 +167,33 @@ public class MainActivity extends Activity implements OnItemClickListener{
                 break;
 
             case R.id.settings_2 :
-                //show content (but as xml and not card)
-                setContentView(R.layout.imageview);
-                super.onResume();
-                break;
 
+                createInfoCards();
+
+                iCardScrollView = new CardScrollView(this);
+                iAdapter = new ExampleCardScrollAdapter();
+                iCardScrollView.setAdapter(iAdapter);
+                iCardScrollView.activate();
+                setContentView(iCardScrollView);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void createInfoCards() {
+        iCards = new ArrayList<CardBuilder>();
+
+        iCards.add(new CardBuilder(this, CardBuilder.Layout.TITLE)
+                .addImage(R.drawable.image1)
+                .setText("Fuselage Map"));
+
+       iCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
+                .setText(String.format(this.getResources().getString(R.string.app_name))));
+
+    }
+
+
 
 
     @Override
