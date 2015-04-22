@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.google.android.glass.app.Card;
 // Specific Glass libraries for gesture detection
+import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
 
@@ -25,7 +26,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private static final String TAG = "MyActivity";
 
     // List of cards
-    private List<Card> mCards;
+    private List<CardBuilder> mCards;
 
     // ScrollView for holding cards
     private CardScrollView mCardScrollView;
@@ -63,19 +64,19 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private void createCards() {
 
 
-        mCards = new ArrayList<Card>();
+        mCards = new ArrayList<CardBuilder>();
         CheckingStepManager listManager = new CheckingStepManager();
 
         mTaskList = listManager.getToDoList();
 
-        Card card;
+        CardBuilder card;
 
         int sizeList = mTaskList.size();
 
         // For all the cards
         for (int i = 0 ; i < sizeList; i++) {
 
-            card = new Card(this);
+            card = new CardBuilder(this, CardBuilder.Layout.TEXT);
             card.setText(mTaskList.get(i).getTask());
 
             // Set in the arrayList
@@ -109,7 +110,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
         @Override
         public int getViewTypeCount() {
 
-            return Card.getViewTypeCount();
+            return CardBuilder.getViewTypeCount();
         }
 
         @Override
@@ -156,7 +157,12 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
             case R.id.settings_2 :
                 //show content (but as xml and not card)
-                setContentView(R.layout.imageview);
+                //setContentView(R.layout.imageview);
+                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
+                .addImage(R.drawable.image1)
+                .setText(R.string.app_name));
+
+
                 super.onResume();
                 break;
 

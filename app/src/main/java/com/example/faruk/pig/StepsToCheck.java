@@ -3,24 +3,24 @@ package com.example.faruk.pig;
 public class StepsToCheck {
 
     // At this moment our task will only have one string
-    private String mTask = "";
+    private int mTask;
 
 
     // Constructor with initial String
-    public StepsToCheck(String stringTask) {
+    public StepsToCheck(int stringTask) {
 
         mTask = stringTask;
 
     }
     // Get task as String
-    public String getTask() {
+    public int getTask() {
 
         return mTask;
 
     }
 
     // Set task as string
-    public void setTask(String task) {
+    public void setTask(int task) {
 
         mTask = task;
 
