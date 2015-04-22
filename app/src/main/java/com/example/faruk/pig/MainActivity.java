@@ -76,7 +76,15 @@ public class MainActivity extends Activity implements OnItemClickListener{
         // For all the cards
         for (int i = 0 ; i < sizeList; i++) {
 
-            card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+            if(i==0) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS);
+            }else if(i==1){
+                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
+            }else{
+                card =new CardBuilder(this, CardBuilder.Layout.TITLE);
+            }
+
+
             card.setText(mTaskList.get(i).getTask());
 
             // Set in the arrayList
@@ -157,10 +165,10 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
             case R.id.settings_2 :
                 //show content (but as xml and not card)
-                //setContentView(R.layout.imageview);
-                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
-                .addImage(R.drawable.image1)
-                .setText(R.string.app_name));
+                setContentView(R.layout.imageview);
+//                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
+//                .addImage(R.drawable.image1)
+//                .setText(R.string.app_name)); hängt Karte an die Checksteps ran!
 
 
                 super.onResume();
