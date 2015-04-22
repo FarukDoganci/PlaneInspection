@@ -15,7 +15,145 @@
         - Avionics equip.vent air inlet valve\n
         - Oxygen discharge indicator
     </string>
-    
+
+    <string name="task_2">
+        2. NOSE SECTION\n
+        - Cockpit Windshield\n
+        - Radome and latches\n
+        - Pilot probes\n
+        - Antennas\n
+        - TAT probes\n
+        - Forward avionics door\n
+        - Ground electrical power panel
+    </string>
+
+    <string name="task_3">
+        3. NOSE L/G AND DOOR\n
+        - Door's Attachment\n
+        - Gear Assy Structure\n
+        - Shock Absorber Sliding Tube\n
+        - Wheels and tires\n
+        - Proximity Sensors\n
+        - Taxi, TO, turn-off lights\n
+        - Hydr. lines and elec. wires
+    </string>
+
+    <string name="task_4">
+        4. RH FWD FUSELAGE\n
+        - RH + AFT avionic doors\n
+        - Service Door\n
+        - Avionic vent air outlet valve\n
+        - Batteries ventilation outlet\n
+        - F/O / CAPT / STBY static ports\n
+        - AOA 2/3 probes\n
+        - FWD cargo door/selector panel
+    </string>
+
+    <string name="task_5">
+        5. LOWER CENTER FUSELAGE\n
+        - Belly Fairing, access panel\n
+        - Antennas\n
+        - Waste Water Drain mast\n
+        - Pack RAM an inlet flap\n
+        - Anti-Collision Beacon light\n
+        - Pack air intakes and outlets
+    </string>
+
+    <string name="task_6">
+        6. RH CENTER WING\n
+        - Landing lights\n
+        - Wing and engine scan lights\n
+        - Slat 1
+    </string>
+
+    <string name="task_7">
+        7. ENG 2 LH SIDE\n
+        - Pylon with fairings and fillets\n
+        - Access panel\n
+        - Fan cowl / Trust reverser doors\n
+        - Reverser Blocker doors\n
+        - Drain mast and Pylon Drains\n
+        - Air inlet/outlets\n
+        - Engine air inlet: Lip Skin, Riveting\n
+        - Engine air inlet: probe, sensors\n
+        - Engine air inlet: Blades/spinner
+    </string>
+
+     <string name="task_8">
+        8. ENG 2 RH SIDE\n
+        - Pylon with fairings and fillets\n
+        - Pressure-relief door\n
+        - Exhaust: LPT blades, Nozzle\n
+        - Fan exhaust/Lining, Exit vane\n
+        - Exhaust Thrust reverser doors\n
+        - Access panel
+    </string>
+
+     <string name="task_9">
+        9. RH WING LEADING EDGE\n
+        - Slats (Pressure relief panels)\n
+        - Surge Tank Air Intake\n
+        - Static Dischargers\n
+        - Tank overpressure burst disc\n
+        - Navigation/Strobe light\n
+        - Wing tip
+    </string>
+
+     <string name="task_10">
+        10. RH WING TRAILING EDGE\n
+        - Static dischargers\n
+        - Control surfaces\n
+        - Flaps and fairings\n
+        - Lower Wing Surface
+    </string>
+
+     <string name="task_11">
+        11. RH L/G AND FUSELAGE\n
+        - Door's Attachment\n
+        - Gear Assy Structure\n
+        - Shock Absorber Sliding Tube\n
+        - Wheels and tires\n
+        - Proximity Sensors\n
+        - Taxi, TO, turn-off lights\n
+        - Hydr. lines and elec. wires\n
+        - Brake Units
+    </string>
+
+    <string name="task_12">
+        12. RH AFT FUSELAGE\n
+        - Waste Water Drain mast\n
+        - Waste Water Drain mast\n
+        - Antennas\n
+        - Cargo Door and selector panel\n
+        - bulk door\n
+        - Passenger/Crew Door\n
+        - Toilet service access panel\n
+        - Outflow valve\n
+        - Radio altimeter Antenna\n
+        - Drain mast
+    </string>
+
+    <string name="task_13">
+        13. TAIL\n
+        - Stabilizer, elevator, rudder\n
+        - Static dischargers\n
+        - Lower fuselage structure impact\n
+        - Wheels and tires
+    </string>
+
+    <string name="task_14">
+        14. APU\n
+        - Access doors\n
+        - Air intake flap closed or open\n
+        - Drains\n
+        - Exhaust\n
+        - Navigation light\n
+        - Tail Cone Strobe light\n
+        - Static Discharger\n
+        - THS, elevator, fin and rudder\n
+        - Fire extinguisher red disc
+    </string>
+
     <!--  Text for optins in menu -->
     <string name="settings_1">Check</string>
     <string name="settings_2">Info</string>
