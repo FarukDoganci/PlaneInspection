@@ -27,6 +27,7 @@ import com.example.faruk.pig.*;
 
 import com.google.android.glass.app.Card;
 // Specific Glass libraries for gesture detection
+import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
 
@@ -40,7 +41,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private List<CardBuilder> iCards;
 
     // List of cards
-    private List<Card> mCards;
+    private List<CardBuilder> mCards;
 
     // ScrollView for holding cards
     private CardScrollView mCardScrollView;
@@ -81,19 +82,19 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private void createCards() {
 
 
-        mCards = new ArrayList<Card>();
+        mCards = new ArrayList<CardBuilder>();
         CheckingStepManager listManager = new CheckingStepManager();
 
         mTaskList = listManager.getToDoList();
 
-        Card card;
+        CardBuilder card;
 
         int sizeList = mTaskList.size();
 
         // For all the cards
         for (int i = 0 ; i < sizeList; i++) {
 
-            card = new Card(this);
+            card = new CardBuilder(this, CardBuilder.Layout.TEXT);
             card.setText(mTaskList.get(i).getTask());
 
             // Set in the arrayList
@@ -105,36 +106,42 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
     // Class to manage CardScrollView
     private class ExampleCardScrollAdapter extends CardScrollAdapter {
+
         @Override
         public int getPosition(Object item) {
+
             return mCards.indexOf(item);
         }
 
         @Override
         public int getCount() {
+
             return mCards.size();
         }
 
         @Override
         public Object getItem(int position) {
+
             return mCards.get(position);
         }
 
         @Override
         public int getViewTypeCount() {
+
             return CardBuilder.getViewTypeCount();
         }
 
         @Override
         public int getItemViewType(int position){
+
             return mCards.get(position).getItemViewType();
         }
 
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return mCards.get(position).getView(convertView, parent);
-        }
+        public View getView(int position, View convertView,
+                            ViewGroup parent) {
 
+            return  mCards.get(position).getView(convertView, parent);
+        }
     }
 
 
@@ -167,6 +174,10 @@ public class MainActivity extends Activity implements OnItemClickListener{
                 break;
 
             case R.id.settings_2 :
+                //show content (but as xml and not card)
+                setContentView(R.layout.imageview);
+                super.onResume();
+                break;
 
                 createInfoCards();
 

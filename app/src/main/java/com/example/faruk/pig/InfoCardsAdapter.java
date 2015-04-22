@@ -5,7 +5,6 @@
 //import android.content.Context;
 //import android.view.View;
 //import android.view.ViewGroup;
-//import com.example.faruk.pig.*;
 //
 //import com.google.android.glass.app.Card;
 //import com.google.android.glass.widget.CardScrollAdapter;
