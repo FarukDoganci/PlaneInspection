@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
         mTaskList = listManager.getToDoList();
 
-        CardBuilder card;
+        CardBuilder card = null;
 
         int sizeList = mTaskList.size();
 
@@ -95,11 +95,23 @@ public class MainActivity extends Activity implements OnItemClickListener{
         for (int i = 0 ; i < sizeList; i++) {
 
             if(i==0) {
-                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS);
+                card = new CardBuilder(this, CardBuilder.Layout.TITLE)
+                .addImage(R.drawable.title);
             }else if(i==1){
                 card =new CardBuilder(this, CardBuilder.Layout.TEXT);
-            }else{
-                card =new CardBuilder(this, CardBuilder.Layout.TITLE);
+            }else if (i==2) {
+                card = new CardBuilder(this, CardBuilder.Layout.TITLE)
+                .addImage(R.drawable.image0);
+            }else if (i==3){
+                    card =new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                    .addImage(R.drawable.image1);
+            }else if (i==4){
+                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
+            }else if (i==5){
+                card =new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image2);
+            }else if (i==6){
+                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
             }
 
 
@@ -183,17 +195,18 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
             case R.id.settings_2 :
 //                show content (but as xml and not card)
-//                setContentView(R.layout.imageview);
+                setContentView(R.layout.imageview);
 //                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
 //                .addImage(R.drawable.image1)
 //                .setText(R.string.app_name)); hängt Karte an die Checksteps ran!
-                createInfoCards();
-
-                iCardScrollView = new CardScrollView(this);
-                iAdapter = new ExampleCardScrollAdapter();
-                iCardScrollView.setAdapter(iAdapter);
-                iCardScrollView.activate();
-                setContentView(iCardScrollView);
+//
+//                createInfoCards();
+//
+//                iCardScrollView = new CardScrollView(this);
+//                iAdapter = new ExampleCardScrollAdapter();
+//                iCardScrollView.setAdapter(iAdapter);
+//                iCardScrollView.activate();
+//                setContentView(iCardScrollView);
                 break;
         }
 

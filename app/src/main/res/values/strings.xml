@@ -159,6 +159,11 @@
     <string name="settings_2">Info</string>
     
     <!-- Voice trigger for launching app -->
-    <string name="glass_voice_trigger">Start the Inspection</string>
+    <string name="glass_voice_trigger">Plane Inspection</string>
+    <string name="map" />
+    <string name="describtion">Carry out a general Visual Inspection as far as visible from the ground:
+                                \n- Check structure for corrosion, cracks, impact damage etc.
+                                \n- Check that there is no evident fuel, oil or hydraulic leaks. </string>
+    <string name="title">EasyJet A319</string>
 
 </resources>

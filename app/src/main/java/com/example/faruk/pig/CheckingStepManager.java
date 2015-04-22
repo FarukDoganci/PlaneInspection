@@ -19,14 +19,24 @@ public class CheckingStepManager {
 
         // Generate random tasks
 // need to finish this by today
+
+        StepsToCheck title_1 = new StepsToCheck(R.string.title);
+        ListToCheck.add(title_1);
+
+        StepsToCheck desc_1 = new StepsToCheck(R.string.describtion);
+        ListToCheck.add(desc_1);
+
+        StepsToCheck map_1 = new StepsToCheck(R.string.map);
+        ListToCheck.add(map_1);
+
         StepsToCheck Step_1 = new StepsToCheck(R.string.task_1);
         ListToCheck.add(Step_1);
 
-        StepsToCheck task_2 = new StepsToCheck(R.string.task_2);
-        ListToCheck.add(task_2);
+        StepsToCheck Step_2 = new StepsToCheck(R.string.task_2);
+        ListToCheck.add(Step_2);
 
-        StepsToCheck task_3 = new StepsToCheck(R.string.task_3);
-        ListToCheck.add(task_3);
+        StepsToCheck Step_3 = new StepsToCheck(R.string.task_3);
+        ListToCheck.add(Step_3);
 
     }
 
