@@ -182,16 +182,11 @@ public class MainActivity extends Activity implements OnItemClickListener{
                 break;
 
             case R.id.settings_2 :
-                //show content (but as xml and not card)
-                setContentView(R.layout.imageview);
+//                show content (but as xml and not card)
+//                setContentView(R.layout.imageview);
 //                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
 //                .addImage(R.drawable.image1)
 //                .setText(R.string.app_name)); hängt Karte an die Checksteps ran!
-
-
-                super.onResume();
-                break;
-
                 createInfoCards();
 
                 iCardScrollView = new CardScrollView(this);
