@@ -1,10 +1,9 @@
 package com.example.faruk.pig;
 
 // Basic Android libraries
-import java.util.ArrayList;
-import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,27 +11,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import java.util.ArrayList;
-import java.util.List;
 
-import android.app.Activity;
-import android.content.Context;
-import android.os.Bundle;
-
-import com.google.android.glass.app.Card.ImageLayout;
-import com.google.android.glass.widget.CardBuilder;
-import com.google.android.glass.widget.CardScrollView;
-import com.example.faruk.pig.*;
-
-
-import com.google.android.glass.app.Card;
-// Specific Glass libraries for gesture detection
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends Activity implements OnItemClickListener{
+// Specific Glass libraries for gesture detection
+
+
+public class MainActivity extends Activity implements OnItemClickListener {
 
     // Define tag for debugging
     private static final String TAG = "MyActivity";
@@ -52,7 +42,6 @@ public class MainActivity extends Activity implements OnItemClickListener{
     private List<StepsToCheck> mTaskList;
     private ExampleCardScrollAdapter mAdapter;
 
-
     private ExampleCardScrollAdapter adapter;
     private CardScrollView iCardScrollView;
     private ExampleCardScrollAdapter iAdapter;
@@ -71,7 +60,9 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
         mCardScrollView.setAdapter(adapter);
         mCardScrollView.setOnItemClickListener(this);
+
         mCardScrollView.activate();
+
 
         // Set CardScrollView as content view
         setContentView(mCardScrollView);
@@ -92,26 +83,29 @@ public class MainActivity extends Activity implements OnItemClickListener{
         int sizeList = mTaskList.size();
 
         // For all the cards
-        for (int i = 0 ; i < sizeList; i++) {
+        for (int i = 0; i < sizeList; i++) {
 
-            if(i==0) {
+            // switch case maybe a better option MM
+
+
+            if (i == 0) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
-                .addImage(R.drawable.title);
-            }else if(i==1){
-                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
-            }else if (i==2) {
+                        .addImage(R.drawable.title);
+            } else if (i == 1) {
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+            } else if (i == 2) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
-                .addImage(R.drawable.image0);
-            }else if (i==3){
-                    card =new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                    .addImage(R.drawable.image1);
-            }else if (i==4){
-                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
-            }else if (i==5){
-                card =new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image0);
+            } else if (i == 3) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+            } else if (i == 4) {
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+            } else if (i == 5) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image2);
-            }else if (i==6){
-                card =new CardBuilder(this, CardBuilder.Layout.TEXT);
+            } else if (i == 6) {
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
             }
 
 
@@ -122,6 +116,97 @@ public class MainActivity extends Activity implements OnItemClickListener{
 
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+
+        // Create options from "/res/menu/main.xml"
+        getMenuInflater().inflate(R.menu.main, menu);
+
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        // Get id for detect what item was selected
+        int id = item.getItemId();
+
+        switch (id) {
+
+            case R.id.settings_1: // Do something for setting 1
+                // Remove currentCard
+                mTaskList.remove(currentCard);
+                mCards.remove(currentCard);    // Remove the current card selected from the list of Cards
+                adapter.notifyDataSetChanged(); // Notify the adapter that needs to update the data
+                break;
+
+            case R.id.settings_2:
+//                show content (but as xml and not card)
+
+
+                // starts the class SecondActivity --> immersion cards
+                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+
+//                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
+//                .addImage(R.drawable.image1)
+//                .setText(R.string.app_name)); hängt Karte an die Checksteps ran!
+//
+//                createInfoCards();
+//
+//                iCardScrollView = new CardScrollView(this);
+//                iAdapter = new ExampleCardScrollAdapter();
+//                iCardScrollView.setAdapter(iAdapter);
+//                iCardScrollView.activate();
+//                setContentView(iCardScrollView);
+
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Faruks Tests
+     * private void createInfoCards() {
+     * iCards = new ArrayList<CardBuilder>();
+     * <p/>
+     * iCards.add(new CardBuilder(this, CardBuilder.Layout.TITLE)
+     * .addImage(R.drawable.image1)
+     * .setText("Fuselage Map"));
+     * <p/>
+     * iCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
+     * .setText(String.format(this.getResources().getString(R.string.app_name))));
+     * <p/>
+     * }*
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position,
+                            long id) {
+        // TODO Auto-generated method stub
+
+        // Set current Card for menu option handle
+        currentCard = position;
+
+        if (currentCard > 2) {
+            openOptionsMenu();
+
+        }
     }
 
     // Class to manage CardScrollView
@@ -152,7 +237,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
         }
 
         @Override
-        public int getItemViewType(int position){
+        public int getItemViewType(int position) {
 
             return mCards.get(position).getItemViewType();
         }
@@ -160,95 +245,8 @@ public class MainActivity extends Activity implements OnItemClickListener{
         public View getView(int position, View convertView,
                             ViewGroup parent) {
 
-            return  mCards.get(position).getView(convertView, parent);
+            return mCards.get(position).getView(convertView, parent);
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // Create options from "/res/menu/main.xml"
-        getMenuInflater().inflate(R.menu.main, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        // Get id for detect what item was selected
-        int id = item.getItemId();
-
-        switch (id) {
-
-            case R.id.settings_1 : // Do something for setting 1
-                // Remove currentCard
-                mTaskList.remove(currentCard);
-                mCards.remove(currentCard); 	// Remove the current card selected from the list of Cards
-                adapter.notifyDataSetChanged(); // Notify the adapter that needs to update the data
-                break;
-
-            case R.id.settings_2 :
-//                show content (but as xml and not card)
-                setContentView(R.layout.imageview);
-//                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
-//                .addImage(R.drawable.image1)
-//                .setText(R.string.app_name)); hängt Karte an die Checksteps ran!
-//
-//                createInfoCards();
-//
-//                iCardScrollView = new CardScrollView(this);
-//                iAdapter = new ExampleCardScrollAdapter();
-//                iCardScrollView.setAdapter(iAdapter);
-//                iCardScrollView.activate();
-//                setContentView(iCardScrollView);
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void createInfoCards() {
-        iCards = new ArrayList<CardBuilder>();
-
-        iCards.add(new CardBuilder(this, CardBuilder.Layout.TITLE)
-                .addImage(R.drawable.image1)
-                .setText("Fuselage Map"));
-
-       iCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
-                .setText(String.format(this.getResources().getString(R.string.app_name))));
-
-    }
-
-
-
-
-    @Override
-    public void onResume()
-    {
-        super.onResume();
-
-        adapter.notifyDataSetChanged();
-    }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position,
-                            long id) {
-        // TODO Auto-generated method stub
-
-        // Set current Card for menu option handle
-        currentCard = position;
-
-        openOptionsMenu();
-
-
-
     }
 
 }

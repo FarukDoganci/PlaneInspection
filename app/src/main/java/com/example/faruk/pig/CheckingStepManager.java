@@ -12,7 +12,7 @@ public class CheckingStepManager {
     private List<StepsToCheck> ListToCheck;
 
 
-    public CheckingStepManager(){
+    public CheckingStepManager() {
 
 
         ListToCheck = new ArrayList<StepsToCheck>();
@@ -39,6 +39,7 @@ public class CheckingStepManager {
         ListToCheck.add(Step_3);
 
     }
+
 
     //Return all tasks
     public List<StepsToCheck> getToDoList() {

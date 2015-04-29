@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.faruk.pig" >
-    <uses-permission
-        android:name="com.google.android.glass.permission.DEVELOPMENT" />
-
-    <!-- mindSdkVersion and targetSdkVersion have to be the same (19) -->
+    package="com.example.faruk.pig"> <!-- mindSdkVersion and targetSdkVersion have to be the same (19) -->
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="19" />
+
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
-
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,19 +31,17 @@
 
             <!-- We want a voice trigger for launching the activity -->
             <intent-filter>
-                <action
-                    android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
             </intent-filter>
 
-            <meta-data android:name="com.google.android.glass.VoiceTrigger"
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
                 android:resource="@xml/voice_trigger_start" />
-
         </activity>
-
-
-
+        <activity
+            android:name=".SecondActivity"
+            android:icon="@drawable/ic_glass_logo"
+            android:label="@string/title_activity_second"></activity>
     </application>
-
-
 
 </manifest>

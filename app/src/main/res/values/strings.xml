@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Inspection App</string>
-    
+
     <!--  Initial text -->
     <string name="hello_world">Inspection App</string>
 
@@ -157,7 +157,7 @@
     <!--  Text for optins in menu -->
     <string name="settings_1">Check</string>
     <string name="settings_2">Info</string>
-    
+
     <!-- Voice trigger for launching app -->
     <string name="glass_voice_trigger">Plane Inspection</string>
     <string name="map" />
@@ -165,5 +165,6 @@
                                 \n- Check structure for corrosion, cracks, impact damage etc.
                                 \n- Check that there is no evident fuel, oil or hydraulic leaks. </string>
     <string name="title">EasyJet A319</string>
+    <string name="title_activity_second">Hello World Immersion</string>
 
 </resources>

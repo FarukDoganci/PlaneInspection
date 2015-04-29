@@ -12,6 +12,7 @@ public class StepsToCheck {
         mTask = stringTask;
 
     }
+
     // Get task as String
     public int getTask() {
 
@@ -25,7 +26,6 @@ public class StepsToCheck {
         mTask = task;
 
     }
-
 
 
 }
