@@ -100,12 +100,12 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image1);
             } else if (i == 4) {
-                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
             } else if (i == 5) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image2);
             } else if (i == 6) {
-                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
             }
 
 

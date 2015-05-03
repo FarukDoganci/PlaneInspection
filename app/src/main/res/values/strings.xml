@@ -7,22 +7,28 @@
     <string name="hello_world">Inspection App</string>
 
     <!--  Text for Strings/tasks in Steps -->
-    <string name="task_1">
+    <string name="task_1a">
         1. LH FWD FUSELAGE\n
         - Passenger/crew Door\n
         - F/O / CAPT / STBY static ports\n
         - AOA 1 probe\n
+    </string>
+
+    <string name="task_1b">
         - Avionics equip.vent air inlet valve\n
         - Oxygen discharge indicator
     </string>
 
-    <string name="task_2">
+    <string name="task_2a">
         2. NOSE SECTION\n
         - Cockpit Windshield\n
         - Radome and latches\n
         - Pilot probes\n
         - Antennas\n
         - TAT probes\n
+    </string>
+
+    <string name="task_2b">
         - Forward avionics door\n
         - Ground electrical power panel
     </string>

@@ -3,8 +3,8 @@ package com.example.faruk.pig;
 import java.util.ArrayList;
 import java.util.List;
 
-/* Manager of tasks. Basically it's a list with all the tasks. At this moment only 4.
-   All tasks are hard-written but in the next version they'll be originated by voice
+/* Manager of tasks. Basically it's the checklist with all the tasks.
+   All tasks are hard-written.
 */
 public class CheckingStepManager {
 
@@ -29,11 +29,17 @@ public class CheckingStepManager {
         StepsToCheck map_1 = new StepsToCheck(R.string.map);
         ListToCheck.add(map_1);
 
-        StepsToCheck Step_1 = new StepsToCheck(R.string.task_1);
-        ListToCheck.add(Step_1);
+        StepsToCheck Step_1A = new StepsToCheck(R.string.task_1a);
+        ListToCheck.add(Step_1A);
 
-        StepsToCheck Step_2 = new StepsToCheck(R.string.task_2);
-        ListToCheck.add(Step_2);
+        StepsToCheck Step_1B = new StepsToCheck(R.string.task_1b);
+        ListToCheck.add(Step_1B);
+
+        StepsToCheck Step_2A = new StepsToCheck(R.string.task_2a);
+        ListToCheck.add(Step_2A);
+
+        StepsToCheck Step_2B = new StepsToCheck(R.string.task_2b);
+        ListToCheck.add(Step_2B);
 
         StepsToCheck Step_3 = new StepsToCheck(R.string.task_3);
         ListToCheck.add(Step_3);
