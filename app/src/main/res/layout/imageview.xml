@@ -14,6 +14,6 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="#ffffffff"
-            android:src="@drawable/image00" />
+            android:src="@drawable/acmap_00" />
     </RelativeLayout>
 </LinearLayout>

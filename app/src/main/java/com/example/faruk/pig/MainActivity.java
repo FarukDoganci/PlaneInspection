@@ -93,59 +93,59 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_01);
 
             } else if (i == 5) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image2);
+                        .addImage(R.drawable.acmap_02);
 
             } else if (i == 7) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image3);
+                        .addImage(R.drawable.acmap_03);
 
             } else if (i == 9) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_04);
 
             } else if (i == 11) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_05);
 
             } else if (i == 13) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_06);
 
             } else if (i == 14) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_07);
 
             } else if (i == 16) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_08);
 
             } else if (i == 18) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_09);
 
             } else if (i == 20) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_10);
 
             } else if (i == 21) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_11);
 
             } else if (i == 23) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_12);
 
             } else if (i == 25) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_13);
 
             } else if (i == 27) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.image1);
+                        .addImage(R.drawable.acmap_14);
 
             } else {
                 card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
