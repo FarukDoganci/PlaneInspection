@@ -91,20 +91,22 @@ public class MainActivity extends Activity implements OnItemClickListener {
             if (i == 0) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
                         .addImage(R.drawable.title);
-            } else if (i == 1) {
-                card = new CardBuilder(this, CardBuilder.Layout.TEXT);
+
             } else if (i == 2) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
                         .addImage(R.drawable.image0);
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image1);
-            } else if (i == 4) {
-                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
+
             } else if (i == 5) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image2);
-            } else if (i == 6) {
+
+            } else if (i == 7) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image3);
+            } else {
                 card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
             }
 

@@ -15,8 +15,7 @@
     </string>
 
     <string name="task_1b">
-        - Avionics equip.vent air inlet valve\n
-        - Oxygen discharge indicator
+        - Avionics equip.vent air inlet valve\n- Oxygen discharge indicator
     </string>
 
     <string name="task_2a">
@@ -29,20 +28,20 @@
     </string>
 
     <string name="task_2b">
-        - Forward avionics door\n
-        - Ground electrical power panel
+        - Forward avionics door\n- Ground electrical power panel
     </string>
 
-    <string name="task_3">
+    <string name="task_3a">
         3. NOSE L/G AND DOOR\n
         - Doors Attachment\n
         - Gear Assy Structure\n
         - Shock Absorber Sliding Tube\n
-        - Wheels and tires\n
-        - Proximity Sensors\n
-        - Taxi, TO, turn-off lights\n
-        - Hydr. lines and elec. wires
     </string>
+
+    <string name="task_3b">
+        - Wheels and tires\n- Proximity Sensors\n- Taxi, TO, turn-off lights\n- Hydr. lines and elec. wires
+    </string>
+
 
     <string name="task_4">
         4. RH FWD FUSELAGE\n
@@ -161,7 +160,7 @@
     </string>
 
     <!--  Text for optins in menu -->
-    <string name="settings_1">Check</string>
+    <string name="settings_1">All OK</string>
     <string name="settings_2">Info</string>
 
     <!-- Voice trigger for launching app -->
