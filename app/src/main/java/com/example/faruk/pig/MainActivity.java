@@ -154,8 +154,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             if (i == 2) {
                 card = new CardBuilder(this, CardBuilder.Layout.EMBED_INSIDE)
-
-                        .setEmbeddedLayout(R.layout.imageview);
+                        .setEmbeddedLayout(R.layout.imageview)
+                        .setFootnote("Aircraft Map");
                 mCards.add(card);
             } else {
                 card.setText(mTaskList.get(i).getTask());
