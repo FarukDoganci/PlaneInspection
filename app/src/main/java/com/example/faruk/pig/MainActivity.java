@@ -85,16 +85,12 @@ public class MainActivity extends Activity implements OnItemClickListener {
         // For all the cards
         for (int i = 0; i < sizeList; i++) {
 
-            // switch case maybe a better option MM
 
 
             if (i == 0) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
                         .addImage(R.drawable.title);
 
-            } else if (i == 2) {
-                card = new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                        .addImage(R.drawable.image00);
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image1);
@@ -106,21 +102,67 @@ public class MainActivity extends Activity implements OnItemClickListener {
             } else if (i == 7) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image3);
+
             } else if (i == 9) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image1);
+
+            } else if (i == 11) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 13) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 14) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 16) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 18) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 20) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 21) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 23) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 25) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
+            } else if (i == 27) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
+
             } else {
                 card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
             }
 
 
-            card.setText(mTaskList.get(i).getTask());
+            if (i == 2) {
+                card = new CardBuilder(this, CardBuilder.Layout.EMBED_INSIDE)
 
-            // Set in the arrayList
-            mCards.add(card);
-
+                        .setEmbeddedLayout(R.layout.imageview);
+                mCards.add(card);
+            } else {
+                card.setText(mTaskList.get(i).getTask());
+                // Set in the arrayList
+                mCards.add(card);
+            }
         }
-
     }
 
     @Override

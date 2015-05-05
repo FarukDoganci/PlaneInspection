@@ -64,6 +64,78 @@ public class CheckingStepManager {
         StepsToCheck Step_4B = new StepsToCheck(R.string.task_4b);
         ListToCheck.add(Step_4B);
 
+        // i = 11
+        StepsToCheck Step_5A = new StepsToCheck(R.string.task_5a);
+        ListToCheck.add(Step_5A);
+
+        // i = 12
+        StepsToCheck Step_5B = new StepsToCheck(R.string.task_5b);
+        ListToCheck.add(Step_5B);
+
+        // i = 13
+        StepsToCheck Step_6A = new StepsToCheck(R.string.task_6a);
+        ListToCheck.add(Step_6A);
+
+        // i = 14
+        StepsToCheck Step_7A = new StepsToCheck(R.string.task_7a);
+        ListToCheck.add(Step_7A);
+
+        // i = 15
+        StepsToCheck Step_7B = new StepsToCheck(R.string.task_7b);
+        ListToCheck.add(Step_7B);
+
+        // i = 16
+        StepsToCheck Step_8A = new StepsToCheck(R.string.task_8a);
+        ListToCheck.add(Step_8A);
+
+        // i = 17
+        StepsToCheck Step_8B = new StepsToCheck(R.string.task_8b);
+        ListToCheck.add(Step_8B);
+
+        // i = 18
+        StepsToCheck Step_9A = new StepsToCheck(R.string.task_9a);
+        ListToCheck.add(Step_9A);
+
+        // i = 19
+        StepsToCheck Step_9B = new StepsToCheck(R.string.task_9b);
+        ListToCheck.add(Step_9B);
+
+        // i = 20
+        StepsToCheck Step_10A = new StepsToCheck(R.string.task_10a);
+        ListToCheck.add(Step_10A);
+
+        // i = 21
+        StepsToCheck Step_11A = new StepsToCheck(R.string.task_11a);
+        ListToCheck.add(Step_11A);
+
+        // i = 22
+        StepsToCheck Step_11B = new StepsToCheck(R.string.task_11b);
+        ListToCheck.add(Step_11B);
+
+        // i = 23
+        StepsToCheck Step_12A = new StepsToCheck(R.string.task_12a);
+        ListToCheck.add(Step_12A);
+
+        // i = 24
+        StepsToCheck Step_12B = new StepsToCheck(R.string.task_12b);
+        ListToCheck.add(Step_12B);
+
+        // i = 25
+        StepsToCheck Step_13A = new StepsToCheck(R.string.task_13a);
+        ListToCheck.add(Step_13A);
+
+        // i = 26
+        StepsToCheck Step_13B = new StepsToCheck(R.string.task_13b);
+        ListToCheck.add(Step_13B);
+
+        // i = 27
+        StepsToCheck Step_14A = new StepsToCheck(R.string.task_14a);
+        ListToCheck.add(Step_14A);
+
+        // i = 28
+        StepsToCheck Step_14B = new StepsToCheck(R.string.task_14b);
+        ListToCheck.add(Step_14B);
+
     }
 
 
