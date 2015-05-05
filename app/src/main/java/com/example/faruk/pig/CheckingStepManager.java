@@ -56,6 +56,14 @@ public class CheckingStepManager {
         StepsToCheck Step_3B = new StepsToCheck(R.string.task_3b);
         ListToCheck.add(Step_3B);
 
+        // i = 9
+        StepsToCheck Step_4A = new StepsToCheck(R.string.task_4a);
+        ListToCheck.add(Step_4A);
+
+        // i = 10
+        StepsToCheck Step_4B = new StepsToCheck(R.string.task_4b);
+        ListToCheck.add(Step_4B);
+
     }
 
 

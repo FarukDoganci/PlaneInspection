@@ -93,8 +93,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
                         .addImage(R.drawable.title);
 
             } else if (i == 2) {
-                card = new CardBuilder(this, CardBuilder.Layout.TITLE)
-                        .addImage(R.drawable.image0);
+                card = new CardBuilder(this, CardBuilder.Layout.CAPTION)
+                        .addImage(R.drawable.image00);
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image1);
@@ -106,6 +106,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
             } else if (i == 7) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
                         .addImage(R.drawable.image3);
+            } else if (i == 9) {
+                card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                        .addImage(R.drawable.image1);
             } else {
                 card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
             }
@@ -152,8 +155,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             case R.id.settings_2:
 //                show content (but as xml and not card)
-
-
                 // starts the class SecondActivity --> immersion cards
                 startActivity(new Intent(MainActivity.this, SecondActivity.class));
 

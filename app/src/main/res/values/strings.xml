@@ -15,7 +15,7 @@
     </string>
 
     <string name="task_1b">
-        - Avionics equip.vent air inlet valve\n- Oxygen discharge indicator
+        1. LH FWD FUSELAGE\n- Avionics equip.vent air inlet valve\n- Oxygen discharge indicator
     </string>
 
     <string name="task_2a">
@@ -28,7 +28,7 @@
     </string>
 
     <string name="task_2b">
-        - Forward avionics door\n- Ground electrical power panel
+        2. NOSE SECTION\n- Forward avionics door\n- Ground electrical power panel
     </string>
 
     <string name="task_3a">
@@ -39,15 +39,20 @@
     </string>
 
     <string name="task_3b">
-        - Wheels and tires\n- Proximity Sensors\n- Taxi, TO, turn-off lights\n- Hydr. lines and elec. wires
+        3. NOSE L/G AND DOOR\n- Wheels and tires\n- Proximity Sensors\n- Taxi, TO, turn-off lights\n- Hydr. lines and elec. wires
     </string>
 
 
-    <string name="task_4">
+    <string name="task_4a">
         4. RH FWD FUSELAGE\n
-        - RH + AFT avionic doors\n
+        - RH+AFT avion. doors\n
         - Service Door\n
         - Avionic vent air outlet valve\n
+
+    </string>
+
+    <string name="task_4b">
+        4. RH FWD FUSELAGE\n
         - Batteries ventilation outlet\n
         - F/O / CAPT / STBY static ports\n
         - AOA 2/3 probes\n
