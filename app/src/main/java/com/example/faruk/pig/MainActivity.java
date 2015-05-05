@@ -93,59 +93,59 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_01);
+                        .addImage(R.drawable.acmap01);
 
             } else if (i == 5) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_02);
+                        .addImage(R.drawable.acmap02);
 
             } else if (i == 7) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_03);
+                        .addImage(R.drawable.acmap03);
 
             } else if (i == 9) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_04);
+                        .addImage(R.drawable.acmap04);
 
             } else if (i == 11) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_05);
+                        .addImage(R.drawable.acmap05);
 
             } else if (i == 13) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_06);
+                        .addImage(R.drawable.acmap06);
 
             } else if (i == 14) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_07);
+                        .addImage(R.drawable.acmap07);
 
             } else if (i == 16) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_08);
+                        .addImage(R.drawable.acmap08);
 
             } else if (i == 18) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_09);
+                        .addImage(R.drawable.acmap09);
 
             } else if (i == 20) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_10);
+                        .addImage(R.drawable.acmap10);
 
             } else if (i == 21) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_11);
+                        .addImage(R.drawable.acmap11);
 
             } else if (i == 23) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_12);
+                        .addImage(R.drawable.acmap12);
 
             } else if (i == 25) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_13);
+                        .addImage(R.drawable.acmap13);
 
             } else if (i == 27) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap_14);
+                        .addImage(R.drawable.acmap14);
 
             } else {
                 card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
