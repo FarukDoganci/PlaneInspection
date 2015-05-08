@@ -39,7 +39,7 @@
                 android:resource="@xml/voice_trigger_start" />
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".InfoStepOne"
             android:icon="@drawable/ic_glass_logo"
             android:label="@string/title_activity_second"></activity>
     </application>

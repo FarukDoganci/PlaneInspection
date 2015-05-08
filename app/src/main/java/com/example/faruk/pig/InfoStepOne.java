@@ -24,7 +24,7 @@ import java.util.List;
  *
  * @see <a href="https://developers.google.com/glass/develop/gdk/touch">GDK Developer Guide</a>
  */
-public class SecondActivity extends Activity {
+public class InfoStepOne extends Activity {
 
     private List<CardBuilder> iCards;
     private CardScrollView iCardScrollView;
@@ -45,6 +45,8 @@ public class SecondActivity extends Activity {
 
     private void createCards() {
         iCards = new ArrayList<CardBuilder>();
+
+
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
                 .setText("Passenger / Crew Door")

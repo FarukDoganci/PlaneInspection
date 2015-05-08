@@ -196,9 +196,23 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
 
             case R.id.settings_2:
-//                show content (but as xml and not card)
-                // starts the class SecondActivity --> immersion cards
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+//
+                // starts the class Info of Step 1 --> immersion cards
+                // main one to remain if not works
+                if (currentCard >=3){
+                    startActivity(new Intent(MainActivity.this, InfoStepOne.class));
+                }
+
+                // starts the class Info of Step 2 --> immersion cards
+                else if (currentCard >=5){
+                    startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
+                }
+
+                else if (currentCard >=7){
+                    startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
+                }
+
+
 
 //                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
 //                .addImage(R.drawable.image1)
@@ -252,6 +266,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
             openOptionsMenu();
 
         }
+    }
+
+    public int getCurrentCard() {
+        return currentCard;
     }
 
     // Class to manage CardScrollView
