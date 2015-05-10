@@ -196,7 +196,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
 
             case R.id.settings_2:
-//
                 // starts the class Info of Step 1 --> immersion cards
                 // main one to remain if not works
                 if (currentCard >=3){

@@ -49,25 +49,17 @@ public class InfoStepTwo extends Activity {
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Passenger / Crew Door")
-                .addImage(R.drawable.acmap00));
+                .setText("Radome and latches")
+                .addImage(R.drawable.radomeandlatches));
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("F/O / CAPT / STBY static ports")
-                .addImage(R.drawable.acmap03));
+                .setText("TAT probes")
+                .addImage(R.drawable.tatprobes));
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
                 .setText("AOA 1 probe")
-                .addImage(R.drawable.acmap07));
-
-        iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Avionics equip.vent air inlet valve")
-                .addImage(R.drawable.acmap12));
-
-        iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Oxygen discharge indicator")
-                .addImage(R.drawable.acmap13));
+                .addImage(R.drawable.groundelectricalpowerpanel));
 
     }
 

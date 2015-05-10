@@ -49,8 +49,7 @@ public class InfoOtherSteps extends Activity {
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Passenger / Crew Door")
-                .addImage(R.drawable.ic_glass_logo));
+                .setText("NO INFO AT THE MOMENT"));
 
     }
 
