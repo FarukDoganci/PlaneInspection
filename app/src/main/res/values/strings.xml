@@ -215,5 +215,6 @@
                                 \n- Check that there is no evident fuel, oil or hydraulic leaks. </string>
     <string name="title">EasyJet A319</string>
     <string name="title_activity_second">Hello World Immersion</string>
+    <string name="title_activity_info_step_two">Hello World Immersion</string>
 
 </resources>
