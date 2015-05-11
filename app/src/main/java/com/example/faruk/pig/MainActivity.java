@@ -196,6 +196,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
 
             case R.id.settings_2:
+                // all the following class which are launched by the startActivity method need to be declared as an Activity!
                 // starts the class Info of Step 1 --> immersion cards
                 // main one to remain if not works
                 if (currentCard >=3 && currentCard<5){
@@ -207,6 +208,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                     startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
                 }
 
+                // starts the class InfoOtherSteps --> immersion cards
                 else if (currentCard >=7){
                     startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
                 }
