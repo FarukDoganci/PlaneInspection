@@ -47,6 +47,11 @@
             android:icon="@drawable/ic_glass_logo"
             android:label="@string/title_activity_info_step_two" >
         </activity>
+        <activity
+            android:name=".InfoOtherSteps"
+            android:icon="@drawable/ic_glass_logo"
+            android:label="@string/title_activity_info_oterh_steps" >
+        </activity>
     </application>
 
 </manifest>
