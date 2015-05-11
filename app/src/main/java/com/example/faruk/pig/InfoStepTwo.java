@@ -61,7 +61,7 @@ public class InfoStepTwo extends Activity {
                 .addImage(R.drawable.tatprobes));
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("AOA 1 probe")
+                .setText("Ground Electrical Power Panel")
                 .addImage(R.drawable.groundelectricalpowerpanel));
 
     }
