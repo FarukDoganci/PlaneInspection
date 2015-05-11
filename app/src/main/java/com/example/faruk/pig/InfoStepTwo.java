@@ -1,20 +1,22 @@
 package com.example.faruk.pig;
 
+import com.google.android.glass.media.Sounds;
+import com.google.android.glass.widget.CardBuilder;
+import com.google.android.glass.widget.CardScrollAdapter;
+import com.google.android.glass.widget.CardScrollView;
+
 import android.app.Activity;
+import android.content.Context;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
-import com.google.android.glass.widget.CardBuilder;
-import com.google.android.glass.widget.CardScrollAdapter;
-import com.google.android.glass.widget.CardScrollView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This Class is a Second Activity for the Info button
  * An {@link Activity} showing a tuggable "Hello World!" card.
  * <p/>
  * The main content view is composed of a one-card {@link CardScrollView} that provides tugging
@@ -41,6 +43,7 @@ public class InfoStepTwo extends Activity {
         iCardScrollView.setAdapter(iAdapter);
         iCardScrollView.activate();
         setContentView(iCardScrollView);
+
     }
 
     private void createCards() {
