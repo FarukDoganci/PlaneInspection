@@ -1,29 +1,22 @@
 package com.example.faruk.pig;
 
+import com.google.android.glass.media.Sounds;
+import com.google.android.glass.widget.CardBuilder;
+import com.google.android.glass.widget.CardScrollAdapter;
+import com.google.android.glass.widget.CardScrollView;
+
 import android.app.Activity;
+import android.content.Context;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
-import com.google.android.glass.widget.CardBuilder;
-import com.google.android.glass.widget.CardScrollAdapter;
-import com.google.android.glass.widget.CardScrollView;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * This Class is a Second Activity for the Info button
- * An {@link Activity} showing a tuggable "Hello World!" card.
- * <p/>
- * The main content view is composed of a one-card {@link CardScrollView} that provides tugging
- * feedback to the user when swipe gestures are detected.
- * If your Glassware intends to intercept swipe gestures, you should set the content view directly
- * and use a {@link com.google.android.glass.touchpad.GestureDetector}.
- *
- * @see <a href="https://developers.google.com/glass/develop/gdk/touch">GDK Developer Guide</a>
- */
+
 public class InfoOtherSteps extends Activity {
 
     private List<CardBuilder> iCards;
@@ -49,7 +42,8 @@ public class InfoOtherSteps extends Activity {
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("NO INFO AT THE MOMENT"));
+                .setText("Pictures to step 3 could be added here"));
+
 
     }
 
