@@ -21,39 +21,39 @@ public class CheckingStepManager {
 // need to finish this by today
 
         // i = 0
-        StepsToCheck title_1 = new StepsToCheck(R.string.title);
+        StepsToCheck title_1 = new StepsToCheck(R.string.title, 0);
         ListToCheck.add(title_1);
 
         // i = 1
-        StepsToCheck desc_1 = new StepsToCheck(R.string.describtion);
+        StepsToCheck desc_1 = new StepsToCheck(R.string.describtion, 0);
         ListToCheck.add(desc_1);
 
         // i = 2
-        StepsToCheck map_1 = new StepsToCheck(R.string.map);
+        StepsToCheck map_1 = new StepsToCheck(R.string.map, 0);
         ListToCheck.add(map_1);
 
         // i = 3
-        StepsToCheck Step_1A = new StepsToCheck(R.string.task_1a);
+        StepsToCheck Step_1A = new StepsToCheck(R.string.task_1a, 1);
         ListToCheck.add(Step_1A);
 
         // i = 4
-        StepsToCheck Step_1B = new StepsToCheck(R.string.task_1b);
+        StepsToCheck Step_1B = new StepsToCheck(R.string.task_1b, 1);
         ListToCheck.add(Step_1B);
 
         // i = 5
-        StepsToCheck Step_2A = new StepsToCheck(R.string.task_2a);
+        StepsToCheck Step_2A = new StepsToCheck(R.string.task_2a, 2);
         ListToCheck.add(Step_2A);
 
         // i = 6
-        StepsToCheck Step_2B = new StepsToCheck(R.string.task_2b);
+        StepsToCheck Step_2B = new StepsToCheck(R.string.task_2b, 2);
         ListToCheck.add(Step_2B);
 
         // i = 7
-        StepsToCheck Step_3A = new StepsToCheck(R.string.task_3a);
+        StepsToCheck Step_3A = new StepsToCheck(R.string.task_3a, 3);
         ListToCheck.add(Step_3A);
 
         // i = 8
-        StepsToCheck Step_3B = new StepsToCheck(R.string.task_3b);
+        StepsToCheck Step_3B = new StepsToCheck(R.string.task_3b, 3);
         ListToCheck.add(Step_3B);
 
         // i = 9
@@ -137,7 +137,7 @@ public class CheckingStepManager {
         ListToCheck.add(Step_14B);
 
         // i = 29
-        StepsToCheck Step_15 = new StepsToCheck(R.string.final_text);
+        StepsToCheck Step_15 = new StepsToCheck(R.string.final_text, 4);
         ListToCheck.add(Step_15);
 
     }

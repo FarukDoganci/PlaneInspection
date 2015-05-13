@@ -216,7 +216,10 @@
     <string name="title">EasyJet A319</string>
     <string name="title_activity_second">Hello World Immersion</string>
     <string name="title_activity_info_step_two">Hello World Immersion</string>
+    <string name="title_activity_info_oterh_steps">Hello World number2</string>
+
     // Thank you screen
     <string name="final_text">Check is completed, thank you for the cooperation.</string>
+
 
 </resources>

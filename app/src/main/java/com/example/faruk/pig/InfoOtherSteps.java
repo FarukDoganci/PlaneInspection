@@ -1,17 +1,14 @@
 package com.example.faruk.pig;
 
-import com.google.android.glass.media.Sounds;
-import com.google.android.glass.widget.CardBuilder;
-import com.google.android.glass.widget.CardScrollAdapter;
-import com.google.android.glass.widget.CardScrollView;
-
 import android.app.Activity;
-import android.content.Context;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+
+import com.google.android.glass.widget.CardBuilder;
+import com.google.android.glass.widget.CardScrollAdapter;
+import com.google.android.glass.widget.CardScrollView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +39,7 @@ public class InfoOtherSteps extends Activity {
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Pictures to step 3 could be added here"));
+                .setText("NO INFO AVAILABLE"));
 
 
     }

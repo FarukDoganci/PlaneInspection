@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.example.faruk.pig.StepsToCheck;
+
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
@@ -26,6 +26,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
     // Define tag for debugging
     private static final String TAG = "MyActivity";
+
 
     //infocards
     private List<CardBuilder> iCards;
@@ -63,7 +64,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
         mCardScrollView.activate();
 
-
         // Set CardScrollView as content view
         setContentView(mCardScrollView);
 
@@ -84,8 +84,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
         // For all the cards
         for (int i = 0; i < sizeList; i++) {
-
-
 
             if (i == 0) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
@@ -186,6 +184,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         // Get id for detect what item was selected
         int id = item.getItemId();
 
+
         switch (id) {
 
             case R.id.settings_1: // Do something for setting 1
@@ -201,19 +200,32 @@ public class MainActivity extends Activity implements OnItemClickListener {
             case R.id.settings_2:
                 // starts the class Info of Step 1 --> immersion cards
                 // main one to remain if not works
-
-
-                    if (currentCard > 2 && currentCard < 5) {
+                //  CheckingStepManager listManager = new CheckingStepManager();
+                //mTaskList = listManager.getToDoList();
+                // int sizeList = mTaskList.size();
+                // For all the cards
+                //  for (int i = 0; i < sizeList; i++) {
+                if (mTaskList.get(currentCard).getID() > 0 && mTaskList.get(currentCard).getID() < 2) {
                         startActivity(new Intent(MainActivity.this, InfoStepOne.class));
-                    }
-
-                    // starts the class Info of Step 2 --> immersion cards
-                    else if (currentCard > 4 && currentCard < 7) {
+                } else if (mTaskList.get(currentCard).getID() > 1 && mTaskList.get(currentCard).getID() < 3) {
                         startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
-                    } else if (currentCard > 6) {
+                } else {
                         startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
                     }
+                //   }
 
+
+                //      if (mTaskList.get(i).getID() > 2 && currentCard < 5) {
+
+                //    }
+
+                // starts the class Info of Step 2 --> immersion cards
+
+                //else if (currentCard > 4 && currentCard < 7) {
+                //      startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
+                // } else if (currentCard > 6) {
+                //     startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
+                //  }
 
 
 //                mCards.add(new CardBuilder(this,CardBuilder.Layout.TEXT)
@@ -264,10 +276,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
         // Set current Card for menu option handle
         currentCard = position;
 
-        if (currentCard > 2) {
-            openOptionsMenu();
+        if (currentCard < 3) {
 
+        } else if (mTaskList.get(currentCard).getID() == 4) {
+
+        } else {
+            openOptionsMenu();
         }
+
     }
 
     public int getCurrentCard() {

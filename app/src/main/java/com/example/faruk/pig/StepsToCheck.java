@@ -4,21 +4,22 @@ public class StepsToCheck {
 
     // At this moment our task will only have one string
     private int mTask;
-
-    public int getID() {
-        return ID;
-    }
-
-    private int ID = -1;
+    private int ID;
 
 
     // Constructor with initial String
-    public StepsToCheck(int stringTask) {
+    public StepsToCheck(int stringTask, int ID) {
 
         mTask = stringTask;
-       this.ID = ID;
-        ID++;
+        this.ID = ID;
     }
+
+    public StepsToCheck(int stringTask) {
+        mTask = stringTask;
+    }
+
+
+
 
     // Get task as String
     public int getTask() {
@@ -32,6 +33,11 @@ public class StepsToCheck {
 
         mTask = task;
 
+    }
+
+    public int getID() {
+
+        return ID;
     }
 
 
