@@ -136,6 +136,10 @@ public class CheckingStepManager {
         StepsToCheck Step_14B = new StepsToCheck(R.string.task_14b);
         ListToCheck.add(Step_14B);
 
+        // i = 29
+        StepsToCheck Step_15 = new StepsToCheck(R.string.final_text);
+        ListToCheck.add(Step_15);
+
     }
 
 

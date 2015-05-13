@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-
+import com.example.faruk.pig.StepsToCheck;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
 import com.google.android.glass.widget.CardScrollView;
@@ -190,26 +190,29 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             case R.id.settings_1: // Do something for setting 1
                 // Remove currentCard
+
                 mTaskList.remove(currentCard);
                 mCards.remove(currentCard);    // Remove the current card selected from the list of Cards
+                //currentCard++;
                 adapter.notifyDataSetChanged(); // Notify the adapter that needs to update the data
+
                 break;
 
             case R.id.settings_2:
                 // starts the class Info of Step 1 --> immersion cards
                 // main one to remain if not works
-                if (currentCard >=3 && currentCard<5){
-                    startActivity(new Intent(MainActivity.this, InfoStepOne.class));
-                }
 
-                // starts the class Info of Step 2 --> immersion cards
-                else if (currentCard >=5 && currentCard<7){
-                    startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
-                }
 
-                else if (currentCard >=7){
-                    startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
-                }
+                    if (currentCard > 2 && currentCard < 5) {
+                        startActivity(new Intent(MainActivity.this, InfoStepOne.class));
+                    }
+
+                    // starts the class Info of Step 2 --> immersion cards
+                    else if (currentCard > 4 && currentCard < 7) {
+                        startActivity(new Intent(MainActivity.this, InfoStepTwo.class));
+                    } else if (currentCard > 6) {
+                        startActivity(new Intent(MainActivity.this, InfoOtherSteps.class));
+                    }
 
 
 
