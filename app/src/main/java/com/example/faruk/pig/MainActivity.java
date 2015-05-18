@@ -40,6 +40,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
     // Current card selected
     private int currentCard = -1;
 
+    //Counter for the Thank You screen
+    public  int counterCard = 0;
+
     private List<StepsToCheck> mTaskList;
     private ExampleCardScrollAdapter mAdapter;
 
@@ -159,6 +162,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 card.setText(mTaskList.get(i).getTask());
                 // Set in the arrayList
                 mCards.add(card);
+
             }
         }
     }
@@ -189,12 +193,15 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             case R.id.settings_1: // Do something for setting 1
                 // Remove currentCard
-
+                counterCard++;
                 mTaskList.remove(currentCard);
                 mCards.remove(currentCard);    // Remove the current card selected from the list of Cards
                 //currentCard++;
                 adapter.notifyDataSetChanged(); // Notify the adapter that needs to update the data
 
+                if(counterCard == 26){
+                    setContentView(R.layout.thanksview);
+                }
                 break;
 
             case R.id.settings_2:

@@ -219,7 +219,7 @@
     <string name="title_activity_info_oterh_steps">Hello World number2</string>
 
     // Thank you screen
-    <string name="final_text">Check is completed, thank you for the cooperation.</string>
+    <string name="final_text">The inspection is completed. Thank you for your cooperation.</string>
 
 
 </resources>
