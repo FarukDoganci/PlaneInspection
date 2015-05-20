@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -52,6 +53,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // keeps the screen on while the application is running
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         super.onCreate(savedInstanceState);
 
@@ -91,69 +94,87 @@ public class MainActivity extends Activity implements OnItemClickListener {
             if (i == 0) {
                 card = new CardBuilder(this, CardBuilder.Layout.TITLE)
                         .addImage(R.drawable.title);
+            } else if (i == 1) {
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
 
             } else if (i == 3) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap01);
+                        .addImage(R.drawable.acmap01)
+                        .showStackIndicator(true);
 
             } else if (i == 5) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap02);
+                        .addImage(R.drawable.acmap02)
+                        .showStackIndicator(true);
 
             } else if (i == 7) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap03);
+                        .addImage(R.drawable.acmap03)
+                        .showStackIndicator(true);
 
             } else if (i == 9) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap04);
+                        .addImage(R.drawable.acmap04)
+                        .showStackIndicator(true);
 
             } else if (i == 11) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap05);
+                        .addImage(R.drawable.acmap05)
+                        .showStackIndicator(true);
 
             } else if (i == 13) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap06);
+                        .addImage(R.drawable.acmap06)
+                        .showStackIndicator(true);
 
             } else if (i == 14) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap07);
+                        .addImage(R.drawable.acmap07)
+                        .showStackIndicator(true);
 
             } else if (i == 16) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap08);
+                        .addImage(R.drawable.acmap08)
+                        .showStackIndicator(true);
 
             } else if (i == 18) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap09);
+                        .addImage(R.drawable.acmap09)
+                        .showStackIndicator(true);
 
             } else if (i == 20) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap10);
+                        .addImage(R.drawable.acmap10)
+                        .showStackIndicator(true);
 
             } else if (i == 21) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap11);
+                        .addImage(R.drawable.acmap11)
+                        .showStackIndicator(true);
 
             } else if (i == 23) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap12);
+                        .addImage(R.drawable.acmap12)
+                        .showStackIndicator(true);
 
             } else if (i == 25) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap13);
+                        .addImage(R.drawable.acmap13)
+                        .showStackIndicator(true);
 
             } else if (i == 27) {
                 card = new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                        .addImage(R.drawable.acmap14);
+                        .addImage(R.drawable.acmap14)
+                        .showStackIndicator(true);
 
             } else {
-                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED);
+                card = new CardBuilder(this, CardBuilder.Layout.TEXT_FIXED)
+                        .showStackIndicator(true);
             }
 
 
-            if (i == 2) {
+
+        if (i == 2) {
                 card = new CardBuilder(this, CardBuilder.Layout.EMBED_INSIDE)
                         .setEmbeddedLayout(R.layout.imageview)
                         .setFootnote("Aircraft Map");
