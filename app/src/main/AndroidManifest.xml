@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+  <!-- author Faruk Doganci, Marc Fink, Marco Mancuso -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.faruk.pig" > <!-- mindSdkVersion and targetSdkVersion have to be the same (19) -->
     <uses-sdk
@@ -29,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- We want a voice trigger for launching the activity -->
+            <!-- voice trigger for launching the activity -->
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
             </intent-filter>

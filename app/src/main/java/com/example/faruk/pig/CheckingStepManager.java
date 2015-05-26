@@ -3,22 +3,21 @@ package com.example.faruk.pig;
 import java.util.ArrayList;
 import java.util.List;
 
-/* Manager of tasks. Basically it's the checklist with all the tasks.
-   All tasks are hard-written.
-*/
+/**
+ * @author Faruk Doganci, Marc Fink, Marco Mancuso
+ *         Manager of tasks. Basically it's a list of (StepsToCheck) Strings, that belongs to the tasks.
+ *         All tasks are hard-written and can be found under "Strings".
+ */
 public class CheckingStepManager {
 
-    // List to store all the tasks
+    // List to store all the Strings
     private List<StepsToCheck> ListToCheck;
-
 
     public CheckingStepManager() {
 
 
         ListToCheck = new ArrayList<StepsToCheck>();
 
-        // Generate random tasks
-// need to finish this by today
 
         // i = 0
         StepsToCheck title_1 = new StepsToCheck(R.string.title, 0);
@@ -136,12 +135,10 @@ public class CheckingStepManager {
         StepsToCheck Step_14B = new StepsToCheck(R.string.task_14b);
         ListToCheck.add(Step_14B);
 
-        }
+    }
 
 
-
-
-    //Return all tasks
+    //Return all Strings
     public List<StepsToCheck> getToDoList() {
 
         return ListToCheck;

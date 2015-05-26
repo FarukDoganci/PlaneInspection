@@ -14,6 +14,13 @@ import com.google.android.glass.widget.CardScrollView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Faruk Doganci, Marc Fink, Marco Mancuso
+ *         This activity stores information after step two.
+ *         In this version, step three to step fourteen is not implemented.
+ *         If you want to implement the info function for other steps,
+ *         you have to create more activities (e.g. class InfoStepTwo).
+ */
 
 public class InfoOtherSteps extends Activity {
 
@@ -37,7 +44,6 @@ public class InfoOtherSteps extends Activity {
 
     private void createCards() {
         iCards = new ArrayList<CardBuilder>();
-
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
@@ -73,7 +79,7 @@ public class InfoOtherSteps extends Activity {
         }
 
         @Override
-        public int getItemViewType(int position){
+        public int getItemViewType(int position) {
             return iCards.get(position).getItemViewType();
         }
 

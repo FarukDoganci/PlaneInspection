@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
@@ -15,15 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This Class is a Second Activity for the Info button
- * An {@link Activity} showing a tuggable "Hello World!" card.
- * <p/>
- * The main content view is composed of a one-card {@link CardScrollView} that provides tugging
- * feedback to the user when swipe gestures are detected.
- * If your Glassware intends to intercept swipe gestures, you should set the content view directly
- * and use a {@link com.google.android.glass.touchpad.GestureDetector}.
- *
- * @see <a href="https://developers.google.com/glass/develop/gdk/touch">GDK Developer Guide</a>
+ * @author Faruk Doganci, Marc Fink, Marco Mancuso
+ *         This activity stores information for step one.
+ *         In this version, step three to step fourteen is not implemented.
+ *         If you want to implement the info function for other steps,
+ *         you have to create more activities (e.g. class InfoStepTwo).
  */
 public class InfoStepOne extends Activity {
 
@@ -45,9 +40,9 @@ public class InfoStepOne extends Activity {
         setContentView(iCardScrollView);
     }
 
+    // creates Cards with "images" and "text" for the info function at step one
     private void createCards() {
         iCards = new ArrayList<CardBuilder>();
-
 
 
         iCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
@@ -71,11 +66,8 @@ public class InfoStepOne extends Activity {
                 .setText("Oxygen discharge indicator")
                 .addImage(R.drawable.oxygendischargeindicator));
 
-        }
-
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
     }
+
 
     private class ExampleCardScrollAdapter extends CardScrollAdapter {
 
@@ -100,7 +92,7 @@ public class InfoStepOne extends Activity {
         }
 
         @Override
-        public int getItemViewType(int position){
+        public int getItemViewType(int position) {
             return iCards.get(position).getItemViewType();
         }
 

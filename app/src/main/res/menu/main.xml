@@ -2,7 +2,7 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     
-   <!-- We want only two items in our menu, Setting 1 and Setting 2 -->
+   <!-- We have two items in our menu, Setting 1 and Setting 2 -->
    <item
         android:id="@+id/settings_1"
         android:title="@string/settings_1"/>

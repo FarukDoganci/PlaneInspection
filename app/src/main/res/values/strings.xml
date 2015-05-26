@@ -214,11 +214,11 @@
                                 \n- Check structure for corrosion, cracks, impact damage etc.
                                 \n- Check that there is no evident fuel, oil or hydraulic leaks. </string>
     <string name="title">EasyJet A319</string>
-    <string name="title_activity_second">Hello World Immersion</string>
-    <string name="title_activity_info_step_two">Hello World Immersion</string>
-    <string name="title_activity_info_oterh_steps">Hello World number2</string>
+    <string name="title_activity_second">InfoStepOne</string>
+    <string name="title_activity_info_step_two">InfoStepTwo</string>
+    <string name="title_activity_info_oterh_steps">InfoStepOther</string>
 
-    // Thank you screen
+    // String for the "thank you" screen
     <string name="final_text">The inspection is completed. Thank you for your cooperation.</string>
 
 

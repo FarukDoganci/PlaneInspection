@@ -1,37 +1,32 @@
 package com.example.faruk.pig;
 
+/**
+ * @author Faruk Doganci, Marc Fink, Marco Mancuso
+ *         This class creates the steps with a String and ID.
+ */
 public class StepsToCheck {
 
-    // At this moment our task will only have one string
     private int mTask;
     private int ID;
 
 
-    // Constructor with initial String
+    // Constructor with initial String and ID
     public StepsToCheck(int stringTask, int ID) {
 
         mTask = stringTask;
         this.ID = ID;
     }
+    // don't use this constructor if you are going to extend the info function
 
     public StepsToCheck(int stringTask) {
         mTask = stringTask;
     }
 
 
-
-
     // Get task as String
     public int getTask() {
 
         return mTask;
-
-    }
-
-    // Set task as string
-    public void setTask(int task) {
-
-        mTask = task;
 
     }
 
